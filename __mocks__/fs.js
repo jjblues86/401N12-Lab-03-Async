@@ -3,7 +3,8 @@
 module.exports = exports = {};
 
 exports.readFile = (file, cb) => {
-    if( file.match(/bad/i) ) {
+    // fix this file
+    if( !file || file.match(/bad/i) ) {
         cb('Invalid File');
     }
     else {
